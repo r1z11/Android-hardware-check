@@ -21,7 +21,7 @@ function Check() {
 
   const checkHardware = async () => {
     try {
-      const result = await invoke('run_adb_check');
+      const result: Info = await invoke('run_adb_check');
 
       if (result) {
         const outputObj = {
