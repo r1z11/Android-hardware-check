@@ -12,7 +12,8 @@ interface Info {
   Model: string,
   RAM: string,
   Sensors: string,
-  Storage: string
+  Storage: string,
+  RootAccess: string
 }
 
 function Check() {
@@ -34,7 +35,8 @@ function Check() {
           "Model": result?.Model,
           "RAM": result?.RAM,
           "Sensors": result?.Sensors,
-          "Storage": result?.Storage
+          "Storage": result?.Storage,
+          "RootAccess": result?.RootAccess
         }
         setOutput(outputObj);
 
@@ -79,6 +81,8 @@ function Check() {
           <p className='value'>{output?.GPU}</p>
           <h4 className='label'>IMEI</h4>
           <p className='value'>{output?.IMEI}</p>
+          <h4 className='label'>Root Access</h4>
+          <p className='value'>{output?.RootAccess}</p>
           <h4 className='label'>Sensors</h4>
           <p className='value'>{output?.Sensors}</p>
         </>
